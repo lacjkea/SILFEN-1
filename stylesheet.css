@@ -7,6 +7,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 /* vvvv-----------------  DESKTOP NAVBAR SILFEN -----------------------vvvv */
 .desktopnav {
   display: grid;
@@ -20,9 +21,7 @@ body {
   justify-content: space-evenly;
   align-self: center;
 }
-/* .desktopnav svg {
-  display: none;
-} */
+
 ul li {
   list-style: none;
 }
@@ -36,14 +35,17 @@ li a:visited {
   background-color: transparent;
   text-decoration: none;
 }
-
-li a:hover {
-  border-bottom: 1px black solid;
+.desktopnav li:hover {
+  scale: 1.1;
+}
+.desktopnav li:hover {
+  scale: 1.1;
 }
 .icons {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  grid-column: 3;
 }
 #basket,
 #heart,
@@ -53,6 +55,7 @@ li a:hover {
 }
 .logo {
   justify-self: center;
+  grid-column: 2;
 }
 .logo img {
   height: 24px;
@@ -91,7 +94,7 @@ li a:hover {
 
 .side-nav {
   height: 100%;
-  width: 0px;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -106,6 +109,7 @@ li a:hover {
   display: flex;
   flex-direction: column;
   margin-top: 4vw;
+  display: none;
 }
 .side-nav ul li {
   border-bottom: 1px rgba(44, 37, 41, 0.14) solid;
@@ -116,19 +120,14 @@ li a:hover {
 #side-menu a {
   padding: 10px 10px 10px 30px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
   color: black;
   display: block;
   transition: 0.3s;
   opacity: 0.9;
   white-space: nowrap;
 }
-.side-nav a:hover {
-  font-weight: bold;
-}
-.navbar-nav a:hover {
-  font-weight: bold;
-}
+
 .side-nav .btn-close {
   position: absolute;
   top: 0;
@@ -137,9 +136,35 @@ li a:hover {
   margin-right: 50px;
 }
 .lesserthansign {
-  padding-right: 1vw;
+  padding-right: 5vw;
+}
+.lesserthansign2 {
+  padding-right: 5vw;
+}
+.lesserthansign3 {
+  padding-right: 5vw;
+}
+.lesserthansign4 {
+  padding-right: 5vw;
+}
+.lesserthansign:hover {
+  cursor: pointer;
 }
 
+#nav-svg {
+  display: none;
+}
+.width {
+  width: 100%;
+}
+.heighLi {
+  padding-bottom: 30vw;
+  transition: 0.5s;
+}
+
+li a:hover {
+  scale: 1.1;
+}
 /*------------------TEXT CARUSEL----------------------------------- */
 .bluebar {
   height: 34px;
@@ -234,9 +259,22 @@ li a:hover {
 
 /* ----------------MEDIA QUERIES----------------------------- */
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
   .desktopnav ul {
     display: none;
   }
+  #nav-svg {
+    display: flex;
+  }
+
+  #nav-svg svg {
+    width: 44px;
+    height: 44px;
+  }
+  .side-nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+    display: block;
+  }
 }
- */

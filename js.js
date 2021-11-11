@@ -19,3 +19,22 @@ function endof() {
   textcarusel();
 }
  */
+
+/* --------------- COLLAPSED SIDE BAR ------------------- */
+
+document.querySelector("#open").addEventListener("click", openSideMenu);
+
+function openSideMenu() {
+  document.querySelector(".side-nav").classList.toggle("width");
+
+  var tl = gsap.timeline();
+  tl.to("rect.one", { duration: 0.35, rotation: 42 });
+  tl.to("rect.two", { opacity: 0, duration: 0.7 }, "<");
+  tl.to("rect.three", { duration: 0.35, rotation: -42 }, "<");
+}
+
+document.querySelector(".lesserthansign").addEventListener("click", foldout);
+
+function foldout() {
+  document.querySelector(".shopLi").classList.toggle("heighLi");
+}
